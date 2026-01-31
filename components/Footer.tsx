@@ -26,7 +26,11 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex gap-6">
+<<<<<<< HEAD
           {['TIKTOK', 'TELEGRAM', 'YOUTUBE'].map(link => (
+=======
+          {['TELEGRAM', 'WHATSAPP', 'BEHANCE'].map(link => (
+>>>>>>> f2d71523e83025e9793788cffccc3628d678d648
              <a key={link} href="#" className="text-[10px] font-bold text-gray-500 hover:text-brand-neon transition-colors tracking-wider">
                {link}
              </a>

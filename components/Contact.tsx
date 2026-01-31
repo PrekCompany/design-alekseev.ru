@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 relative overflow-hidden" ref={ref}>
       <div className="absolute inset-0 bg-gradient-to-b from-black to-[#1a0529] -z-10"></div>
       
+<<<<<<< HEAD
       {/* SVG Definitions for Squircle */}
       <svg width="0" height="0" className="absolute">
         <defs>
@@ -18,6 +19,8 @@ const Contact: React.FC = () => {
         </defs>
       </svg>
 
+=======
+>>>>>>> f2d71523e83025e9793788cffccc3628d678d648
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
         {/* Left Side: Text */}
@@ -35,7 +38,11 @@ const Contact: React.FC = () => {
             Открыт для новых вызовов. Оставьте заявку или напишите напрямую, чтобы обсудить детали вашего будущего сайта.
           </p>
 
+<<<<<<< HEAD
           <div className="space-y-6 mb-12">
+=======
+          <div className="space-y-6">
+>>>>>>> f2d71523e83025e9793788cffccc3628d678d648
             <div className="flex items-start gap-4 group cursor-pointer">
                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-300">
                  <span className="text-lg">📧</span>
@@ -57,6 +64,7 @@ const Contact: React.FC = () => {
                </div>
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Social Media Dock */}
           <div className="relative inline-block">
@@ -107,6 +115,8 @@ const Contact: React.FC = () => {
              </div>
           </div>
 
+=======
+>>>>>>> f2d71523e83025e9793788cffccc3628d678d648
         </div>
 
         {/* Right Side: Simple Form */}
