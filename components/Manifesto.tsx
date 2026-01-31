@@ -27,11 +27,7 @@ const Manifesto: React.FC = () => {
              
              <div className={`p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm transition-all duration-1000 delay-500 hover:bg-white/10 hover:border-brand-purple/30 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <h3 className="text-xl font-bold mb-2 text-brand-neon">Реализация</h3>
-<<<<<<< HEAD
                 <p className="text-gray-400 text-sm">Создание детализированных дизайн-систем и интерактивных прототипов. Мы передаем разработчикам идеальные макеты.</p>
-=======
-                <p className="text-gray-400 text-sm">Использование передовых технологий (WebGL, React, AI) для создания вау-эффекта.</p>
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
              </div>
           </div>
         </div>

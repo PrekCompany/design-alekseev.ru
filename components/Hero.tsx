@@ -14,7 +14,6 @@ const Hero: React.FC = () => {
         <div className="md:col-span-7">
           <h1 className="text-5xl md:text-8xl font-black leading-tight mb-8">
             <span className="font-serif italic font-normal text-brand-neon block mb-2 opacity-0 animate-reveal-blur">Design Studio</span>
-<<<<<<< HEAD
             <span className="uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-neon to-brand-purple block opacity-0 animate-reveal-blur delay-200 filter drop-shadow-[0_0_10px_rgba(124,58,237,0.3)]">
               ALEKSEEV
             </span>
@@ -26,32 +25,9 @@ const Hero: React.FC = () => {
             Мы превращаем сложные идеи в элегантные цифровые продукты. Эстетика, которая работает на ваш бизнес.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center opacity-0 animate-reveal-blur delay-1000">
-=======
-            <span className="uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-neon to-brand-purple block opacity-0 animate-reveal-blur delay-100 filter drop-shadow-[0_0_10px_rgba(124,58,237,0.3)]">
-              ALEKSEEV
-            </span>
-            <span className="uppercase text-white block opacity-0 animate-reveal-blur delay-200 text-3xl md:text-5xl mt-2 tracking-tight">
-              WEB & MOTION
-            </span>
-          </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed opacity-0 animate-reveal-blur delay-300 border-l-2 border-brand-purple pl-6">
-            Мы превращаем сложные идеи в элегантные цифровые продукты. Эстетика, которая работает на ваш бизнес.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center opacity-0 animate-reveal-blur delay-400">
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
-             <a href="#contact" className="no-underline">
-               <button className="animated-button">
-                  <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                  </svg>
-                  <span className="text">Обсудить проект</span>
-                  <span className="circle"></span>
-                  <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-                  </svg>
-                </button>
+           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center opacity-0 animate-reveal-blur delay-1000">
+             <a href="#contact" className="animated-button no-underline" aria-label="Обсудить проект">
+              <span className="text">Обсудить проект</span>
              </a>
              
              <div className="hidden sm:block text-xs text-gray-500 uppercase tracking-widest pl-4">
@@ -62,11 +38,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* 3D Visual Element */}
-<<<<<<< HEAD
         <div className="md:col-span-5 relative hidden md:block opacity-0 animate-scale-in delay-1200 perspective-1000">
-=======
-        <div className="md:col-span-5 relative hidden md:block opacity-0 animate-scale-in delay-500 perspective-1000">
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
            <div className="relative w-full aspect-square flex items-center justify-center preserve-3d animate-float">
               {/* Core */}
               <div className="absolute w-32 h-32 bg-brand-purple rounded-full blur-[60px] opacity-50"></div>

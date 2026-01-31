@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -6,72 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design Alekseev | Студия Дизайна</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
             },
             colors: {
               brand: {
-                black: '#050505',
-                purple: '#7c3aed',
-                lightPurple: '#d8b4fe',
-                neon: '#a78bfa',
-                darkPurple: '#4c1d95',
-                surface: '#121212'
-              }
+                black: "#050505",
+                purple: "#7c3aed",
+                lightPurple: "#d8b4fe",
+                neon: "#a78bfa",
+                darkPurple: "#4c1d95",
+                surface: "#121212",
+              },
             },
             animation: {
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'float-delayed': 'float 6s ease-in-out 3s infinite',
-              'reveal-blur': 'revealBlur 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-<<<<<<< HEAD
-              'scale-in': 'scaleIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-=======
-              'scale-in': 'scaleIn 1s ease-out forwards',
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
-              'spin-slow': 'spin 10s linear infinite',
-              'spin-reverse-slow': 'spin-reverse 15s linear infinite',
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+              "float-delayed": "float 6s ease-in-out 3s infinite",
+              "reveal-blur":
+                "revealBlur 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              "scale-in": "scaleIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+              "spin-slow": "spin 10s linear infinite",
+              "spin-reverse-slow": "spin-reverse 15s linear infinite",
             },
             keyframes: {
               float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
               },
               revealBlur: {
-<<<<<<< HEAD
-                '0%': { opacity: '0', filter: 'blur(20px)', transform: 'translateY(50px)' },
-                '100%': { opacity: '1', filter: 'blur(0)', transform: 'translateY(0)' },
+                "0%": {
+                  opacity: "0",
+                  filter: "blur(20px)",
+                  transform: "translateY(50px)",
+                },
+                "100%": {
+                  opacity: "1",
+                  filter: "blur(0)",
+                  transform: "translateY(0)",
+                },
               },
               scaleIn: {
-                '0%': { opacity: '0', transform: 'scale(0.6)', filter: 'blur(20px)' },
-                '100%': { opacity: '1', transform: 'scale(1)', filter: 'blur(0)' },
-=======
-                '0%': { opacity: '0', filter: 'blur(10px)', transform: 'translateY(30px)' },
-                '100%': { opacity: '1', filter: 'blur(0)', transform: 'translateY(0)' },
-              },
-              scaleIn: {
-                '0%': { opacity: '0', transform: 'scale(0.9)' },
-                '100%': { opacity: '1', transform: 'scale(1)' },
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
+                "0%": {
+                  opacity: "0",
+                  transform: "scale(0.6)",
+                  filter: "blur(20px)",
+                },
+                "100%": {
+                  opacity: "1",
+                  transform: "scale(1)",
+                  filter: "blur(0)",
+                },
               },
               fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
               },
-              'spin-reverse': {
-                '0%': { transform: 'rotate(0deg)' },
-                '100%': { transform: 'rotate(-360deg)' },
-              }
-            }
+              "spin-reverse": {
+                "0%": { transform: "rotate(0deg)" },
+                "100%": { transform: "rotate(-360deg)" },
+              },
+            },
           },
         },
-      }
+      };
     </script>
     <style>
       body {
@@ -79,7 +86,7 @@
         color: #ffffff;
         overflow-x: hidden;
       }
-      
+
       /* 3D Perspective Utilities */
       .perspective-1000 {
         perspective: 1000px;
@@ -90,132 +97,194 @@
       .card-3d {
         transition: transform 0.5s ease;
       }
-      .card-3d:hover {
-        transform: rotateX(5deg) rotateY(5deg);
-      }
 
       .glass-card {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        /* border: 1px solid rgba(255, 255, 255, 0.1); */
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .glass-card:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(167, 139, 250, 0.3);
-        box-shadow: 0 0 30px rgba(124, 58, 237, 0.15);
+      /* Disable heavy backdrop-filter while the card is flipping to avoid GPU compositing blur */
+      .card.glass-card:hover,
+      .card.glass-card:active {
+        backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.02);
+        border-color: rgba(167, 139, 250, 0.18);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
       }
 
       /* Animated Button - Purple Theme */
       .animated-button {
         position: relative;
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 4px;
-        padding: 16px 36px;
-        border: 4px solid;
-        border-color: transparent;
-        font-size: 16px;
-        background-color: inherit;
-        border-radius: 100px;
-        font-weight: 600;
+        gap: 8px;
+        padding: 10px 26px;
+        border: 2px solid rgba(167, 139, 250, 0.18);
+        font-size: 15px;
+        background-color: transparent;
+        border-radius: 999px;
+        font-weight: 700;
         color: #a78bfa; /* brand-neon */
-        box-shadow: 0 0 0 2px #a78bfa;
         cursor: pointer;
         overflow: hidden;
-        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: all 0.36s cubic-bezier(0.23, 1, 0.32, 1);
         text-transform: uppercase;
         letter-spacing: 1px;
+        z-index: 5;
       }
 
       .animated-button svg {
-        position: absolute;
-        width: 24px;
+        width: 18px;
         fill: #a78bfa;
-        z-index: 9;
-        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: all 0.36s ease;
       }
 
-      .animated-button .arr-1 {
-        right: 16px;
-      }
-
+      .animated-button .arr-1,
       .animated-button .arr-2 {
-        left: -25%;
+        position: relative;
+        display: inline-block;
+        margin: 0 6px;
+        opacity: 0.95;
       }
 
-      .animated-button .circle {
+      /* per-button decorative circle removed to avoid visual artifacts */
+
+      .animated-button .text {
+        position: relative;
+        z-index: 2;
+        transform: translateX(0);
+        transition: transform 0.36s ease;
+      }
+
+      .animated-button:hover {
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .animated-button:hover .text {
+        transform: translateX(6px);
+      }
+
+      .animated-button:hover svg {
+        fill: #fff;
+      }
+
+      .animated-button:active {
+        transform: translateY(0);
+      }
+      .animated-button:active {
+        transform: translateY(0);
+      }
+
+      /* Button animated gradient + lift effect (no filters/backdrop) */
+      .animated-button {
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        background-size: 200% 100%;
+      }
+
+      .animated-button::before {
+        content: "";
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px;
-        height: 20px;
-        background-color: #a78bfa;
-        border-radius: 50%;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+          90deg,
+          rgba(124, 58, 237, 0.14) 0%,
+          rgba(167, 139, 250, 0.06) 40%,
+          rgba(124, 58, 237, 0.12) 100%
+        );
+        transform: translateX(-12%);
+        transition:
+          transform 420ms cubic-bezier(0.2, 0.9, 0.2, 1),
+          opacity 320ms ease;
         opacity: 0;
-        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
       }
 
       .animated-button .text {
         position: relative;
-        z-index: 1;
-        transform: translateX(-12px);
-        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: 2;
+        transition: transform 360ms cubic-bezier(0.2, 0.9, 0.2, 1);
       }
 
       .animated-button:hover {
-        box-shadow: 0 0 0 12px transparent;
-        color: #050505;
-        border-radius: 12px;
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(124, 58, 237, 0.12);
+        color: #fff;
       }
 
-      .animated-button:hover .arr-1 {
-        right: -25%;
-      }
-
-      .animated-button:hover .arr-2 {
-        left: 16px;
-      }
-
-      .animated-button:hover .text {
-        transform: translateX(12px);
-      }
-
-      .animated-button:hover svg {
-        fill: #050505;
-      }
-
-      .animated-button:active {
-        scale: 0.95;
-        box-shadow: 0 0 0 4px #a78bfa;
-      }
-
-      .animated-button:hover .circle {
-        width: 220px;
-        height: 220px;
+      .animated-button:hover::before {
+        transform: translateX(0);
         opacity: 1;
       }
 
+      .animated-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.06);
+      }
+
+      .animated-button:active {
+        transform: translateY(-1px) scale(0.998);
+      }
+      /* per-button hover circle behavior removed */
+
+      /* debug outline removed */
+
       /* --- NEW FLIP CARD STYLES (Adapted to Purple) --- */
       .card {
-        overflow: visible;
+        overflow: hidden;
         width: 100%;
         min-height: 320px;
+        height: 100%;
         perspective: 1000px;
+        position: relative;
+        display: block;
       }
 
       .content {
         width: 100%;
+        min-height: 320px;
         height: 100%;
         transform-style: preserve-3d;
+        transform-origin: center center;
         transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
-        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
         border-radius: 16px;
         position: relative;
+        will-change: transform;
       }
 
-      .front, .back {
+      /* Reduce blur / pixelation during 3D transforms */
+      .card,
+      .content,
+      .front,
+      .back,
+      .front-content,
+      .back-content {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        image-rendering: optimizeQuality;
+      }
+
+      /* Slight Z offsets help browsers composite layers cleanly */
+      .front,
+      .back {
+        transform: translateZ(0.1px);
+      }
+      .front .front-content,
+      .back .back-content {
+        transform: translateZ(1px);
+      }
+
+      .front,
+      .back {
         background-color: #151515;
         position: absolute;
         width: 100%;
@@ -224,6 +293,24 @@
         -webkit-backface-visibility: hidden;
         border-radius: 16px;
         overflow: hidden;
+      }
+
+      /* Ensure front face and interactive elements sit above decorative layers */
+      .back {
+        z-index: 5;
+      }
+      .front {
+        z-index: 20;
+        pointer-events: auto;
+      }
+      .front .animated-button {
+        z-index: 30;
+        pointer-events: auto;
+      }
+      a,
+      button,
+      .animated-button {
+        pointer-events: auto !important;
       }
 
       /* Initial View (Called .back in CSS provided, keeping naming for structure) */
@@ -235,19 +322,29 @@
         align-items: center;
         overflow: hidden;
         background-color: #0f0f0f;
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        pointer-events: none;
       }
 
       .back::before {
         position: absolute;
-        content: ' ';
+        content: " ";
         display: block;
         width: 160px;
         height: 160%;
         /* PURPLE GRADIENT */
-        background: linear-gradient(90deg, transparent, #7c3aed, #a78bfa, #7c3aed, #7c3aed, transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #7c3aed,
+          #a78bfa,
+          #7c3aed,
+          #7c3aed,
+          transparent
+        );
         animation: rotation_481 5000ms infinite linear;
         opacity: 0.5;
+        pointer-events: none;
       }
 
       .back-content {
@@ -271,15 +368,59 @@
         color: white;
         background-color: #080808;
         border: 1px solid #7c3aed;
+        pointer-events: auto;
       }
 
       .card:hover .content {
         transform: rotateY(180deg);
       }
 
+      /* Ensure content and faces accept pointer events so interactive elements work */
+.card .content {
+  pointer-events: none;
+}
+
+.card .front,
+.card .front * {
+  pointer-events: auto;
+}
+
+.card .back,
+.card .back * {
+  pointer-events: none;
+}
+
+
+      /* Completely disable blur/backdrop/animated blurs when front face is shown */
+      .card:hover .circle,
+      .card:hover .back::before,
+      .card:hover .glass-card,
+      .card:hover .back,
+      .card:hover .front,
+      .card:hover .front-content,
+      .card:hover .back-content {
+        filter: none !important;
+        backdrop-filter: none !important;
+        -webkit-filter: none !important;
+        animation: none !important;
+        will-change: auto !important;
+      }
+
+      /* Ensure text and icons stay crisp while flipped */
+      .card:hover .front,
+      .card:hover .front * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
       @keyframes rotation_481 {
-        0% { transform: rotateZ(0deg); }
-        100% { transform: rotateZ(360deg); }
+        0% {
+          transform: rotateZ(0deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
       }
 
       .front .front-content {
@@ -306,6 +447,8 @@
         border: 1px solid rgba(124, 58, 237, 0.4);
       }
 
+      
+
       .description {
         width: 100%;
         padding: 10px;
@@ -322,9 +465,24 @@
         border-radius: 50%;
         background-color: #7c3aed; /* Purple */
         position: relative;
-        filter: blur(15px);
+        filter: blur(8px);
         animation: floating 2600ms infinite linear;
         opacity: 0.4;
+        transition:
+          filter 0.28s ease,
+          opacity 0.28s ease;
+        pointer-events: none;
+      }
+
+      /* Disable heavy decorative blurs while the card is flipping */
+      .card:hover .circle {
+        filter: none;
+        opacity: 0.36;
+      }
+
+      .card:hover .back::before {
+        opacity: 0.08;
+        filter: none;
       }
 
       #bottom {
@@ -346,12 +504,17 @@
       }
 
       @keyframes floating {
-        0% { transform: translateY(0px); }
-        50% { transform: translateY(10px); }
-        100% { transform: translateY(0px); }
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
       }
-<<<<<<< HEAD
-      
+
       /* --- Custom Mobile Menu Button (Requested) --- */
       .menu-btn {
         width: 150px;
@@ -428,11 +591,17 @@
 
       /* Hover Staggered Effect */
       .menu-btn:hover .hamburger .line {
-          background-color: #a78bfa; /* Neon purple */
+        background-color: #a78bfa; /* Neon purple */
       }
-      .menu-btn:hover .hamburger .line:nth-child(1) { width: 50%; }
-      .menu-btn:hover .hamburger .line:nth-child(2) { width: 100%; }
-      .menu-btn:hover .hamburger .line:nth-child(3) { width: 75%; }
+      .menu-btn:hover .hamburger .line:nth-child(1) {
+        width: 50%;
+      }
+      .menu-btn:hover .hamburger .line:nth-child(2) {
+        width: 100%;
+      }
+      .menu-btn:hover .hamburger .line:nth-child(3) {
+        width: 75%;
+      }
 
       /* Active State (X transformation) */
       .hamburger.active .line:nth-child(1) {
@@ -451,48 +620,68 @@
         width: 100%;
         background-color: #f5f5f5;
       }
-      
+
       /* Ensure text hides when active to show the X properly if desired, or keep as is */
       .menu-btn:has(.hamburger.active) .text {
-         /* Optional: you can hide text when open if you want */
+        /* Optional: you can hide text when open if you want */
       }
-=======
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
 
       /* Scrollbar */
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #050505; }
-      ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-      ::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
-      
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7c3aed;
+      }
+
       /* Animation Utilities */
-      .delay-100 { animation-delay: 100ms; }
-      .delay-200 { animation-delay: 200ms; }
-      .delay-300 { animation-delay: 300ms; }
-      .delay-400 { animation-delay: 400ms; }
-      .delay-500 { animation-delay: 500ms; }
-<<<<<<< HEAD
-      .delay-700 { animation-delay: 700ms; }
-      .delay-1000 { animation-delay: 1000ms; }
-      .delay-1200 { animation-delay: 1200ms; }
-=======
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
+      .delay-100 {
+        animation-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+      }
+      .delay-400 {
+        animation-delay: 400ms;
+      }
+      .delay-500 {
+        animation-delay: 500ms;
+      }
+      .delay-700 {
+        animation-delay: 700ms;
+      }
+      .delay-1000 {
+        animation-delay: 1000ms;
+      }
+      .delay-1200 {
+        animation-delay: 1200ms;
+      }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+          "react/": "https://esm.sh/react@^19.2.4/",
+          "react": "https://esm.sh/react@^19.2.4",
+          "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>

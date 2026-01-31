@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { Menu, X } from 'lucide-react';
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
 
 const navItems = [
   { label: 'ПОРТФОЛИО', href: '#works' },
@@ -73,7 +69,6 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Toggle Custom Button */}
         <button 
           className="md:hidden menu-btn"
@@ -89,14 +84,6 @@ const Navbar: React.FC = () => {
           <span className="text">
             {isMobileOpen ? 'CLOSE' : 'MENU'}
           </span>
-=======
-        {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-white hover:text-brand-purple transition-colors"
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-        >
-          {isMobileOpen ? <X /> : <Menu />}
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
         </button>
       </div>
 
@@ -113,11 +100,7 @@ const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
-<<<<<<< HEAD
           <a href="#contact" className="text-brand-neon font-bold mt-4" onClick={() => setIsMobileOpen(false)}>
-=======
-          <a href="#contact" className="text-brand-neon font-bold mt-4">
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
             НАЧАТЬ ПРОЕКТ →
           </a>
         </div>

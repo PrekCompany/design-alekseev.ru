@@ -8,29 +8,43 @@ const services: ServiceItem[] = [
     id: '1',
     icon: <PenTool className="w-8 h-8" />,
     title: 'БРЕНДИНГ',
-    description: 'Разработка уникального визуального стиля, логотипа и айдентики, которые выделят вас на фоне конкурентов.',
+    description: 'Разработка визуальной стратегии, логотипа и айдентики, которые делают бренд узнаваемым.',
     tags: ['Логотип', 'Brandbook', 'Стиль']
   },
   {
     id: '2',
     icon: <Monitor className="w-8 h-8" />,
     title: 'ВЕБ-ДИЗАЙН',
-    description: 'Создание современных, адаптивных и удобных сайтов. От лендингов до корпоративных порталов.',
+    description: 'Адаптивные интерфейсы и прототипы — удобство и конверсия в одном решении.',
     tags: ['UX/UI', 'Figma', 'Прототипы']
   },
   {
     id: '3',
-<<<<<<< HEAD
     icon: <Box className="w-8 h-8" />,
     title: '3D & MOTION',
-    description: 'Создание впечатляющей 3D-графики и анимации. Оживляем интерфейсы и создаем вирусный контент.',
+    description: '3D-модели, сцены и motion-дизайн для продуктов, презентаций и соцсетей.',
     tags: ['Blender', 'After Effects', 'Spline']
-=======
+  },
+  {
+    id: '4',
+    icon: <Layers className="w-8 h-8" />,
+    title: 'УПАКОВКА',
+    description: 'Дизайн упаковки, который продаёт — от структуры до финишной печати.',
+    tags: ['Dieline', 'Принт', 'Материалы']
+  },
+  {
+    id: '5',
+    icon: <Smartphone className="w-8 h-8" />,
+    title: 'МОБИЛЬНЫЕ UI',
+    description: 'Интуитивные интерфейсы для мобильных приложений с фокусом на пользовательский опыт.',
+    tags: ['iOS', 'Android', 'Прототип']
+  },
+  {
+    id: '6',
     icon: <Zap className="w-8 h-8" />,
-    title: 'РАЗРАБОТКА',
-    description: 'Чистый код, быстрая загрузка и SEO-оптимизация. Мы используем современные стеки (React, Next.js).',
-    tags: ['Frontend', 'Backend', 'API']
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
+    title: 'ГРАФИКА',
+    description: 'Иллюстрации, посты и маркетинговая графика для кампаний и соцсетей.',
+    tags: ['Иллюстрация', 'SMM', 'Контент']
   }
 ];
 
@@ -39,7 +53,6 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="py-24 relative perspective-1000">
-<<<<<<< HEAD
       {/* Define Squircle Clip for Services */}
       <svg width="0" height="0" className="absolute">
         <defs>
@@ -49,8 +62,6 @@ const Services: React.FC = () => {
         </defs>
       </svg>
 
-=======
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <div className={`mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
           <span className="text-brand-purple text-xs font-bold uppercase tracking-[0.2em] block mb-4">
@@ -58,11 +69,7 @@ const Services: React.FC = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold">
             Комплексные <br />
-<<<<<<< HEAD
             <span className="font-serif italic text-gray-400 font-normal">Визуальные Решения</span>
-=======
-            <span className="font-serif italic text-gray-400 font-normal">Цифровые Решения</span>
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
           </h2>
         </div>
 
@@ -76,23 +83,18 @@ const Services: React.FC = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* NEW FLIP CARD STRUCTURE */}
-              <div className="card">
+              <div className="card card-3d glass-card">
                 <div className="content">
                   
                   {/* Initial View (Back in CSS) */}
                   <div className="back">
                     <div className="back-content">
-<<<<<<< HEAD
                       {/* Updated Icon Container with Squircle Shape */}
                       <div 
                         className="w-24 h-24 bg-gradient-to-br from-brand-purple to-brand-darkPurple flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(124,58,237,0.5)] z-20 border border-white/20"
                         style={{ clipPath: 'url(#squircleClipServices)' }}
                       >
                         <div className="text-white">
-=======
-                      <div className="bg-white/5 w-20 h-20 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10 z-20 shadow-[0_0_20px_rgba(124,58,237,0.4)]">
-                        <div className="text-brand-neon">
->>>>>>> f2d71523e83025e9793788cffccc3628d678d648
                           {service.icon}
                         </div>
                       </div>
@@ -121,6 +123,11 @@ const Services: React.FC = () => {
                         <p className="card-footer text-gray-300 text-sm leading-relaxed">
                           {service.description}
                         </p>
+                        <div className="mt-6 flex justify-center">
+                          <a href="#contact"  className="animated-button" aria-label={`Заказать ${service.title}`}>
+                            <span className="text">Заказать</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
