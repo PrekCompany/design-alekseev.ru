@@ -9,6 +9,15 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 relative overflow-hidden" ref={ref}>
       <div className="absolute inset-0 bg-gradient-to-b from-black to-[#1a0529] -z-10"></div>
       
+      {/* SVG Definitions for Squircle */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0.5 C 0,0 0,0 0.5,0 S 1,0 1,0.5 1,1 0.5,1 0,1 0,0.5"></path>
+          </clipPath>
+        </defs>
+      </svg>
+
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
         {/* Left Side: Text */}
@@ -22,32 +31,82 @@ const Contact: React.FC = () => {
               Следующий?
             </span>
           </h2>
-          <p className="text-gray-400 mb-12 max-w-md">
-            Открыт для новых вызовов. Оставьте заявку или напишите напрямую, чтобы обсудить детали вашего будущего сайта.
+          <p className="text-gray-400 mb-10 max-w-md">
+            Открыт для новых вызовов. Выберите удобный способ связи или оставьте заявку.
           </p>
 
-          <div className="space-y-6">
-            <div className="flex items-start gap-4 group cursor-pointer">
-               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-300">
-                 <span className="text-lg">📧</span>
-               </div>
-               <div>
-                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Email</p>
-                 <a href="mailto:hello@design-alekseev.ru" className="text-white group-hover:text-brand-neon transition-colors font-medium">
-                   hello@design-alekseev.ru
+          {/* New Grid Layout for Contact Buttons */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+             <a href="mailto:hello@design-alekseev.ru" className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-purple/50 hover:bg-brand-purple/10 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-brand-purple/20 text-brand-purple flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Написать на Email</div>
+                <div className="text-white font-semibold text-sm truncate">hello@design-alekseev.ru</div>
+             </a>
+
+             <a href="#" className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-neon/50 hover:bg-brand-neon/10 transition-all duration-300">
+                <div className="w-10 h-10 rounded-full bg-brand-neon/20 text-brand-neon flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.57 2 2 0 0 1 1.72 2.12z"/></svg>
+                </div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Telegram / WhatsApp</div>
+                <div className="text-white font-semibold text-sm">+7 (999) 000-00-00</div>
+             </a>
+          </div>
+
+          <div className="mb-4 text-xs font-bold text-gray-500 uppercase tracking-widest">
+            Медиа и Соцсети
+          </div>
+
+          {/* Social Media Dock */}
+          <div className="relative inline-block">
+             <div className="absolute inset-0 bg-black/20 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl"></div>
+
+             <div className="relative flex items-end gap-x-4 p-3">
+               {/* TikTok (Gray) */}
+               <div className="relative group">
+                 <a href="#" className="block" aria-label="TikTok">
+                    <div
+                      style={{ clipPath: 'url(#squircleClip)' }}
+                      className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center shadow-lg border border-gray-600/50 cursor-pointer transform transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+                      </svg>
+                    </div>
                  </a>
                </div>
-            </div>
-            <div className="flex items-start gap-4">
-               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-purple transition-colors duration-300">
-                 <span className="text-lg">📱</span>
+
+               {/* Telegram (Blue) */}
+               <div className="relative group">
+                 <a href="#" className="block" aria-label="Telegram">
+                    <div
+                      style={{ clipPath: 'url(#squircleClip)' }}
+                      className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg border border-blue-500/50 cursor-pointer transform transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M22.9 2.3c-.6-.6-1.5-.7-2.3-.4L2.5 9.1c-1 .4-1 .9-1 1.3 0 .4.5.8 1.4 1.1l4.9 1.6 1.7 5.6c.2.6.5.7 1 .7.4 0 .6-.2.8-.4l2.4-2.4 5 3.7c.9.5 1.7.3 1.9-.8l3.4-16.1c.1-.6-.2-1.3-.7-1.8zm-9.3 12.3-1.6-1.6 8.5-7.7-10.6 6.6-.7-2.3 13.5-5.3-2.9 13.9-6.2-3.6z"/>
+                      </svg>
+                    </div>
+                 </a>
                </div>
-               <div>
-                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Telegram / WhatsApp</p>
-                 <p className="text-white font-medium">+7 (999) 000-00-00</p>
+
+               {/* YouTube (Red) */}
+               <div className="relative group">
+                 <a href="#" className="block" aria-label="YouTube">
+                    <div
+                      style={{ clipPath: 'url(#squircleClip)' }}
+                      className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center shadow-lg border border-red-500/50 cursor-pointer transform transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                      </svg>
+                    </div>
+                 </a>
                </div>
-            </div>
+             </div>
           </div>
+
         </div>
 
         {/* Right Side: Simple Form */}

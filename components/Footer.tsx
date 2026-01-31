@@ -26,15 +26,15 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex gap-6">
-          {['TELEGRAM', 'WHATSAPP', 'BEHANCE'].map(link => (
-             <a key={link} href="#" className="text-[10px] font-bold text-gray-500 hover:text-brand-neon transition-colors tracking-wider">
+          {['TIKTOK', 'TELEGRAM', 'YOUTUBE'].map(link => (
+             <a key={link} href="#" className="text-[10px] font-bold text-gray-500 hover:text-brand-neonHV transition-colors tracking-wider">
                {link}
              </a>
           ))}
         </div>
 
         <div className="text-[10px] text-gray-700">
-          © 2024 Alekseev Design. Все права защищены.
+          © 2026 Alekseev Design. Все права защищены.
         </div>
       </div>
     </footer>

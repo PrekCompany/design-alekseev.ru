@@ -20,10 +20,10 @@ const services: ServiceItem[] = [
   },
   {
     id: '3',
-    icon: <Zap className="w-8 h-8" />,
-    title: 'РАЗРАБОТКА',
-    description: 'Чистый код, быстрая загрузка и SEO-оптимизация. Мы используем современные стеки (React, Next.js).',
-    tags: ['Frontend', 'Backend', 'API']
+    icon: <Box className="w-8 h-8" />,
+    title: '3D & MOTION',
+    description: 'Создание впечатляющей 3D-графики и анимации. Оживляем интерфейсы и создаем вирусный контент.',
+    tags: ['Blender', 'After Effects', 'Spline']
   }
 ];
 
@@ -32,6 +32,15 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="py-24 relative perspective-1000">
+      {/* Define Squircle Clip for Services */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <clipPath id="squircleClipServices" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0.5 C 0,0 0,0 0.5,0 S 1,0 1,0.5 1,1 0.5,1 0,1 0,0.5"></path>
+          </clipPath>
+        </defs>
+      </svg>
+
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <div className={`mb-16 transition-all duration-1000 ${isInView ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-10'}`}>
           <span className="text-brand-purple text-xs font-bold uppercase tracking-[0.2em] block mb-4">
@@ -39,7 +48,7 @@ const Services: React.FC = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold">
             Комплексные <br />
-            <span className="font-serif italic text-gray-400 font-normal">Цифровые Решения</span>
+            <span className="font-serif italic text-gray-400 font-normal">Визуальные Решения</span>
           </h2>
         </div>
 
@@ -59,8 +68,12 @@ const Services: React.FC = () => {
                   {/* Initial View (Back in CSS) */}
                   <div className="back">
                     <div className="back-content">
-                      <div className="bg-white/5 w-20 h-20 rounded-full flex items-center justify-center backdrop-blur-md border border-white/10 z-20 shadow-[0_0_20px_rgba(124,58,237,0.4)]">
-                        <div className="text-brand-neon">
+                      {/* Updated Icon Container with Squircle Shape */}
+                      <div 
+                        className="w-24 h-24 bg-gradient-to-br from-brand-purple to-brand-darkPurple flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(124,58,237,0.5)] z-20 border border-white/20"
+                        style={{ clipPath: 'url(#squircleClipServices)' }}
+                      >
+                        <div className="text-white">
                           {service.icon}
                         </div>
                       </div>
