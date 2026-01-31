@@ -31,8 +31,8 @@ const Contact: React.FC = () => {
               Следующий?
             </span>
           </h2>
-          <p className="text-gray-400 mb-12 max-w-md">
-            Открыт для новых вызовов. Оставьте заявку или напишите напрямую, чтобы обсудить детали вашего будущего сайта.
+          <p className="text-gray-400 mb-10 max-w-md">
+            Открыт для новых вызовов. Выберите удобный способ связи или оставьте заявку.
           </p>
 
           <div className="space-y-6 mb-12">
@@ -46,16 +46,35 @@ const Contact: React.FC = () => {
                    hello@design-alekseev.ru
                  </a>
                </div>
-            </div>
-            <div className="flex items-start gap-4">
-               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-purple transition-colors duration-300">
-                 <span className="text-lg">📱</span>
+
+               {/* Telegram (Blue) */}
+               <div className="relative group">
+                 <a href="#" className="block" aria-label="Telegram">
+                    <div
+                      style={{ clipPath: 'url(#squircleClip)' }}
+                      className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg border border-blue-500/50 cursor-pointer transform transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M22.9 2.3c-.6-.6-1.5-.7-2.3-.4L2.5 9.1c-1 .4-1 .9-1 1.3 0 .4.5.8 1.4 1.1l4.9 1.6 1.7 5.6c.2.6.5.7 1 .7.4 0 .6-.2.8-.4l2.4-2.4 5 3.7c.9.5 1.7.3 1.9-.8l3.4-16.1c.1-.6-.2-1.3-.7-1.8zm-9.3 12.3-1.6-1.6 8.5-7.7-10.6 6.6-.7-2.3 13.5-5.3-2.9 13.9-6.2-3.6z"/>
+                      </svg>
+                    </div>
+                 </a>
                </div>
-               <div>
-                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Telegram / WhatsApp</p>
-                 <p className="text-white font-medium">+7 (999) 000-00-00</p>
+
+               {/* YouTube (Red) */}
+               <div className="relative group">
+                 <a href="#" className="block" aria-label="YouTube">
+                    <div
+                      style={{ clipPath: 'url(#squircleClip)' }}
+                      className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center shadow-lg border border-red-500/50 cursor-pointer transform transition-all duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                      </svg>
+                    </div>
+                 </a>
                </div>
-            </div>
+             </div>
           </div>
 
           {/* Social Media Dock */}
